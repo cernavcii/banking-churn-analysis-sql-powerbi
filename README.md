@@ -82,9 +82,11 @@ Bu müşteri grubu, churn riskini azaltmaya yönelik hedefli aksiyonlar için ö
 ## 📈 Power BI Dashboard’ları
 Oluşturulan Power BI raporları aşağıdaki sayfalardan oluşmaktadır:
 
-- **Executive Summary**
-- **Churn vs Non-Churn Analizi**
-- **High-Risk Customer View**
+- **Yönetici Özeti**
+- **Segment Analizi**
+- **Finansal Etki**
+- **Aksiyon Sayfası**
+- **Müşteri Profili**
 
 Dashboard ekran görüntüleri `/powerbi/dashboard_screenshots/` klasöründe yer almaktadır.
 
