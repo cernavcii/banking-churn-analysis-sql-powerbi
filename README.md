@@ -20,17 +20,40 @@ Bu analiz aşağıdaki sorulara yanıt arar:
 📎 **Detaylı iş problemi ve varsayımlar:**  
 🔗 *Notice dokümanı linki buraya*
 
-## 🛠 Kullanılan Teknolojiler
-- **SQL** – Veri hazırlama, churn hesaplamaları
-- **Power BI** – KPI’lar, dashboard ve raporlama
-- **GitHub** – Versiyonlama ve dokümantasyon
-
 ## 📊 Hesaplanan Temel Metrikler
 - Churn Oranı (%)
 - High-Risk Müşteri Oranı
 - Churn vs Non-Churn Dağılımı
 - Segment Bazlı Churn Analizi
 - Bakiye – Churn İlişkisi
+
+## 🛠 Kullanılan Teknolojiler
+![SQL](https://img.shields.io/badge/SQL-Data%20Analysis-blue?logo=postgresql&logoColor=white) 
+![Microsoft SQL Server](https://img.shields.io/badge/Microsoft%20SQL%20Server-Database-red?logo=microsoftsqlserver&logoColor=white) 
+![Power BI](https://img.shields.io/badge/Power%20BI-Visualization-yellow?logo=powerbi&logoColor=black) 
+
+## 📂 Veri Kaynağı
+
+Bu projede kullanılan müşteri verisi **Maven Analytics – Data Playground**’tan alınmıştır.  
+Veri seti aşağıdaki linkten erişilebilir:
+
+🔗 https://mavenanalytics.io/data-playground/bank-customer-churn
+
+> Kaynak: *Maven Analytics Data Playground – Bank Customer Churn Dataset*
+## 📝 Detaylı Analiz ve Dokümantasyon
+
+Bu projeye ait:
+- Veri seti açıklamaları  
+- Churn tanımı ve varsayımlar  
+- SQL hesaplama mantıkları  
+- Power BI KPI yorumları  
+- İş birimleri için öneriler  
+
+tek bir dokümanda toplanmıştır.
+
+🔗 **Notice Dokümanı:**  
+[https://notice.site/your-notice-link](https://www.notion.so/Bank-Customer-Churn-Analysis-2e8902ccbf278068bad9d10b055c3688)
+
 
 ---
 ## 🔍 Churn Tanımı
@@ -83,22 +106,35 @@ Bu müşteri grubu, churn riskini azaltmaya yönelik hedefli aksiyonlar için ö
 Oluşturulan Power BI raporları aşağıdaki sayfalardan oluşmaktadır:
 
 - **Yönetici Özeti**
+![Yönetici Özeti](powerbi/1yöneticiözeti.png)
 - **Segment Analizi**
+![Segment Analizi](powerbi/2segmentanalizi.png)
 - **Finansal Etki**
+![Finansal Etki](powerbi/3finansaletki.png)
 - **Aksiyon Sayfası**
+![Aksiyon Sayfası](powerbi/4aksiyon.png)
 - **Müşteri Profili**
+![Müşteri Profili](powerbi/5müşteriprofili.png)
 
 Dashboard ekran görüntüleri `/powerbi/dashboard_screenshots/` klasöründe yer almaktadır.
-
-📎 **Dashboard tasarım kararları ve KPI mantığı:**  
-🔗 *Notice Power BI açıklama linki*
 
 ---
 
 ## 💡 Öne Çıkan İçgörüler
-- Aktif olmayan müşterilerde churn riski anlamlı şekilde daha yüksektir
-- Düşük bakiye ve düşük ürün kullanımına sahip müşteriler churn etmeye daha yatkındır
-- Belirli yaş ve müşteri segmentlerinde churn yoğunlaşmaktadır
+- Churn oranı %20’nin üzerindedir, bu da her 5 müşteriden 1’inin bankadan ayrılma riski taşıdığını göstermektedir. Bu seviye bankacılık sektörü için yüksek churn riski olarak değerlendirilmektedir.
 
-📎 **İş birimleri için aksiyon önerileri:**  
-🔗 *Notice içgörü & öneriler linki*
+- Aktif olmayan müşterilerde churn olasılığı anlamlı şekilde daha yüksektir. Özellikle IsActiveMember = 0 olan müşteri grubunda churn yoğunlaşmaktadır. Bu durum, müşteri etkileşiminin churn üzerindeki kritik rolünü göstermektedir.
+
+- Düşük bakiye segmentindeki müşteriler churn etmeye daha yatkındır. Bakiye arttıkça churn oranının azaldığı gözlemlenmiştir. Bu bulgu, finansal bağlılığın müşteri sadakatini artırdığını göstermektedir.
+
+- Tek ürün kullanan müşteriler, çoklu ürün kullanan müşterilere kıyasla daha yüksek churn riski taşımaktadır. Ürün çeşitliliği arttıkça churn oranı düşmektedir.
+
+- Belirli yaş segmentlerinde churn yoğunlaşması görülmektedir. Özellikle orta yaş ve üzeri müşteri gruplarında churn oranı ortalamanın üzerindedir. Bu segmentler için hedefli müşteri tutundurma stratejileri gereklidir.
+
+- Coğrafi segmentler arasında churn davranışı farklılık göstermektedir. Bazı bölgelerde churn oranı belirgin şekilde daha yüksektir; bu durum bölgesel müşteri deneyimi veya ürün uyumsuzluğu ile ilişkilendirilebilir.
+
+- Kredi kartına sahip olmayan müşteriler churn etmeye daha yatkındır. Bu da ek ürün sahipliğinin müşteri bağlılığı üzerinde olumlu etkisi olduğunu desteklemektedir.
+
+- Yüksek churn riski taşıyan müşteriler, toplam müşteri kitlesinin azınlığını oluştursa da potansiyel gelir kaybının önemli bir kısmını temsil etmektedir. Bu nedenle erken uyarı mekanizmaları kritik önemdedir.
+
+
