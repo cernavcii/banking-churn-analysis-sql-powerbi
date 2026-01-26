@@ -17,8 +17,6 @@ Bu analiz aşağıdaki sorulara yanıt arar:
 - Hangi müşteriler churn ediyor?
 - Churn riski en yüksek segmentler hangileri?
 - Müşteri davranışları churn ile nasıl ilişkilidir?
-📎 **Detaylı iş problemi ve varsayımlar:**  
-🔗 *Notice dokümanı linki buraya*
 
 ## 📊 Hesaplanan Temel Metrikler
 - Churn Oranı (%)
